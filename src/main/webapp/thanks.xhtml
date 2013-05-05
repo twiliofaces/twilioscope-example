@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<f:view xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:tf="http://twiliofaces.org/twiliofaces">
+	<f:event type="preRenderView" listener="#{userController.saveUser}" />
+	<tf:response>
+		<tf:say voice="woman" language="it">ciao #{userController.from}</tf:say>
+		<tf:play>#{userController.recordingUrl}</tf:play>
+	</tf:response>
+</f:view>

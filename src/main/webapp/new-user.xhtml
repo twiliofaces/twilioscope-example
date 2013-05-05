@@ -1,0 +1,12 @@
+<ui:composition xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:tf="http://twiliofaces.org/twiliofaces">
+	<tf:response>
+		<tf:say voice="woman" language="it">Ciao, non ti conosco, come ti chiami?</tf:say>
+		<tf:record method="POST" maxLength="5" finishOnKey="*"
+			action="./thanks.jsf"></tf:record>
+	</tf:response>
+</ui:composition>
